@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="pt">
@@ -10,10 +14,15 @@
 
     <body>
         <h1>Formulário test</h1>
-    
+        
+        <?php
+            include_once('config/formMessage.php')
+           //echo $message;
+        ?>
+
         <form action="config/formAction.php" method="get">
-        <p>Your name: <input type="text" name="inputName" /></p>
-        <p>Your age: <input type="text" name="inputIdade" /></p>
+        <p>Your name: <input type="text" name="inputName"  /></p>
+        <p>Your age: <input type="text" name="inputIdade" required /></p>
         <p><input type='submit' value="Enviar dados" /></p>
 
         </form> 
