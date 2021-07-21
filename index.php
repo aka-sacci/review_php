@@ -16,8 +16,15 @@ session_start();
         <h1>Formulário test</h1>
         
         <?php
-            include_once('config/formMessage.php')
-           //echo $message;
+            include_once('config/formMessage.php');
+            unset($_SESSION['formMessage']); //unseta variável de sessão após exibi-lá na tela (ao recarregar a página, a mensagem desaparece)
+            
+            
+            //teste de double$$
+            //$pai="mae";
+            //$mae="filho";
+            //echo $$pai; //vai retornar filho, pois ele vai ecoar a variável $mae ('mae' é o valor alocado no $pai)
+        
         ?>
 
         <form action="config/formAction.php" method="get">
