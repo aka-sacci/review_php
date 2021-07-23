@@ -22,6 +22,6 @@ $validacao = validationData($inputName, $inputIdade);
             $_SESSION['formMessage'] = "$inputName, falta só $idadeDiff ano(s) pra voce poder ser preso";
             }
     }
-        header("location:../index.php");
+        header("location:../review_forms.php");
 
 ?> 
