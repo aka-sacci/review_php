@@ -1,6 +1,6 @@
 # review_php
 
-    This project was made to review some basic features, tools and techniques used in development of PHP projects, like sessions, forms, functions, directory organization, etc.
+This project was made to review some basic features, tools and techniques used in development of PHP projects, like sessions, forms, functions, directory organization, classes, etc.
 
 
 
