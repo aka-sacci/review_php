@@ -7,30 +7,32 @@
 function validUser(array $user) : bool
 {
 
-    if(empty($user['id']) || empty($user['name']) || empty($user['yo'])) {
-        return false;
+    if(empty($user['id']) ||
+    empty($user['name']) || 
+    empty($user['yo'])) 
+    {
+        throw new Exception("Preencha todos os campos!", 10001); //message, code
     }
-
     return true;
-
 }
 
 $user = [
     'id' => 1,
-    'name' => 'gerso',
+    'name' => '6',
     'yo' => 10
 ];
 
-$validation = validUser($user);
+    //trata a excessão e exibe uma mensagem amigável ao usuário.
+    try{
+    $validation = validUser($user);
+    }
+    catch(Exception $e){
+    echo $e->getCode() . ": " . $e->getMessage();
+    die();
+    }
+    finally{ //sempre executado dps do try/catch se passar o try
+        echo 'status: ' . (int)$validation;
+    }
 
-if(!$validation)
-{
-    echo "invalid user!";
-
-}else{
-
-    echo "valid user";
-
-};
-
+    echo 'Usuário validado!';
 ?>
